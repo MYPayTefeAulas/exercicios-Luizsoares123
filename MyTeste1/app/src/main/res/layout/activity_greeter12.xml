@@ -13,43 +13,42 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
-        android:text="TextView"
+        android:text="Greeter:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Greeter:" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtNumeroGreeter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="TextView"
+        android:layout_width="13dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="80dp"
+        android:text="1"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtGreeter"
         app:layout_constraintStart_toEndOf="@+id/txtGreeter"
-        app:layout_constraintTop_toTopOf="@+id/txtGreeter"
-        tools:text="1" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btTrocar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
         android:text="Trocar"
         app:layout_constraintBottom_toBottomOf="@+id/txtGreeter"
-        app:layout_constraintTop_toTopOf="@+id/txtGreeter"
-        tools:layout_editor_absoluteX="186dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtGreeter" />
 
     <Button
         android:id="@+id/btImprimir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="32dp"
         android:text="Imprimir Próximo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtGreeter" />
 

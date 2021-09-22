@@ -25,8 +25,8 @@ class PessoasActivity : AppCompatActivity() {
             idade = binding.txtIdade.text.toString().toInt()
             binding.txtIdade.text.clear()
 
-            val pessoa = Pessoa(nome,idade)
-            listaPessoas.add(pessoa)
+ //           val pessoa = Pessoa(nome,idade)
+ //           listaPessoas.add(pessoa)
         }
 
         setContentView(binding.root)
@@ -39,5 +39,11 @@ class PessoasActivity : AppCompatActivity() {
         val pessoasAtual = listaPessoas[indiceAtual]
         indiceAtual++
         return  "Nome: ${pessoasAtual.nome}, Indade: ${pessoasAtual.idade}"
+    }
+    fun imprimirNomeContato(){
+
+    }
+    fun imprimirTelefoneContatos(){
+
     }
 }

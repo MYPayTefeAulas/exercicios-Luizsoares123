@@ -5,7 +5,7 @@
     android:id="@+id/txtSaida"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaActivity2">
+    tools:context=".ListaFrutas">
 
     <TextView
         android:id="@+id/textSaida"

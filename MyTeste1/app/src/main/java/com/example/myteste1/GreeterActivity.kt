@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myteste1.databinding.ActivityGreeter12Binding
 
-class Greeter1Activity2 : AppCompatActivity() {
+class GreeterActivity : AppCompatActivity() {
     private  lateinit var binding: ActivityGreeter12Binding
     private val listaNomes = mutableListOf<String>()
     private var indiceAtual = 0
  //   private var greeterAtual = 1
-    private lateinit var greeterAtual : GreeterTipo1
+    private lateinit var greeterAtual : Greeter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +17,9 @@ class Greeter1Activity2 : AppCompatActivity() {
         binding = ActivityGreeter12Binding.inflate(layoutInflater)
 //--------------------------------------------------------------
        // configuração de variaveis "globais" da tela
-        val greeter1 = GreeterTipo1("Olá")
-        val greeter2 = GreeterTipo1("Bem vindo")
+        val greeter1 = Greeter("Olá")
+        val greeter2 = Greeter("Bem vindo")
+        val greeter3 = Greeter("Oi")
         greeterAtual = greeter1
         listaNomes.add("Luiz")
         listaNomes.add("Alex")
@@ -54,10 +55,13 @@ class Greeter1Activity2 : AppCompatActivity() {
                 greeterAtual = greeter2
                 binding.txtNumeroGreeter.text = "2"
 
+            }else if(greeterAtual == greeter2){
+                greeterAtual = greeter3
+                binding.txtNumeroGreeter.text = "3"
+
             }else{
                 greeterAtual = greeter1
                 binding.txtNumeroGreeter.text = "1"
-
             }
         }
 

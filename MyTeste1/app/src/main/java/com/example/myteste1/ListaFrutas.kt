@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myteste1.databinding.ActivityLista2Binding
 
-class ListaActivity2 : AppCompatActivity() {
+class ListaFrutas : AppCompatActivity() {
     private lateinit var binding: ActivityLista2Binding
 
     private val Listafrutas = listOf("maçã", "mamão", "abacate")

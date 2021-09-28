@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTeste1">
         <activity
+            android:name=".Pessoa02Activity"
+            android:exported="true" />
+        <activity
+            android:name=".PessoaActivity"
+            android:exported="true" />
+        <activity
             android:name=".AgendaActivity"
             android:exported="true" />
         <activity
-            android:name=".Greeter1Activity2"
+            android:name=".GreeterActivity"
             android:exported="true" />
         <activity
             android:name=".PessoasActivity"
@@ -25,10 +31,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListaActivity2"
+            android:name=".ListaFrutas"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityCalculadora"
             android:exported="true" />
     </application>
 

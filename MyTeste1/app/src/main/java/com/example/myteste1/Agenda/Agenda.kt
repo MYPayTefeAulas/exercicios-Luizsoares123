@@ -1,10 +1,10 @@
-package com.example.myteste1
+package com.example.myteste1.Agenda
 
 class Agenda() {
-    private var listaContatos = mutableListOf<Pessoa>()
+    private var listaContatos = mutableListOf<ClasseAgenda>()
     private var  indiceAtual = 0
 
-    fun salvarContato(novoContato: Pessoa){
+    fun salvarContato(novoContato: ClasseAgenda){
         listaContatos.add(novoContato)
     }
     fun imprimirNomeContato(): String{

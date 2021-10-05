@@ -10,6 +10,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#D62222"
+        android:backgroundTint="#00BCD4"
         android:text="Escolha um dos Exercícos:"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

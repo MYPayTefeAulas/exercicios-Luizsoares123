@@ -1,4 +1,4 @@
-package com.example.myteste1
+package com.example.myteste1.Agenda
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -19,8 +19,12 @@ class AgendaActivity : AppCompatActivity() {
         binding.btSalvar.setOnClickListener {
             val nome = binding.txtNome.text.toString()
             val telefone = binding.txtTelefone.text.toString()
-            val novoContato = Pessoa(nome,0, telefone)
+            val novoContato = ClasseAgenda(nome,0, telefone)
             agenda.salvarContato(novoContato)
+            binding.txtSaida.text = "${nome},${telefone} "
+
+
+
         }
         binding.btProximo.setOnClickListener {
             binding.txtNome.setText(agenda.imprimirNomeContato())

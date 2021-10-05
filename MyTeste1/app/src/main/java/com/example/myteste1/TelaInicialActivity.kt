@@ -3,6 +3,7 @@ package com.example.myteste1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myteste1.Agenda.AgendaActivity
 import com.example.myteste1.databinding.ActivityTelaInicialBinding
 import com.example.myteste1.greeters.GreeterActivity
 

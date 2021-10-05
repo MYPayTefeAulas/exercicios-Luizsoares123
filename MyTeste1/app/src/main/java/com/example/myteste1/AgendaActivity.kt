@@ -4,7 +4,6 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myteste1.databinding.ActivityAgendaBinding
-import com.example.myteste1.databinding.ActivityMainBinding
 
 class AgendaActivity : AppCompatActivity() {
 

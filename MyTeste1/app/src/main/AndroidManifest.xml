@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myteste1">
 
     <application
@@ -10,32 +11,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTeste1">
         <activity
-            android:name=".Pessoa02Activity"
-            android:exported="true" />
-        <activity
-            android:name=".PessoaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AgendaActivity"
-            android:exported="true" />
-        <activity
-            android:name=".GreeterActivity"
-            android:exported="true" />
-        <activity
-            android:name=".PessoasActivity"
-            android:exported="true">
+            android:name=".TelaInicialActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            </activity>
+        <activity
+            android:name=".PessoasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalculadoraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AgendaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".greeters.GreeterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PessoasActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+
         </activity>
         <activity
             android:name=".ListaFrutas"
             android:exported="true" />
         <activity
-            android:name=".MainActivityCalculadora"
-            android:exported="true" />
+            android:name=".CalculadoraActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity" />
     </application>
 
 </manifest>

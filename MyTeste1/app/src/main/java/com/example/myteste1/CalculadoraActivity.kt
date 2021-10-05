@@ -2,16 +2,16 @@ package com.example.myteste1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.myteste1.databinding.ActivityMainBinding
+import com.example.myteste1.databinding.ActivityCalculadoraBinding
 
-class MainActivityCalculadora : AppCompatActivity() {
+class CalculadoraActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityCalculadoraBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCalculadoraBinding.inflate(layoutInflater)
         binding.btTrocaTexto.setOnClickListener {
   //          binding.txtHello.text = "Olá, my friend"
             binding.txtHello.text = calculadora()

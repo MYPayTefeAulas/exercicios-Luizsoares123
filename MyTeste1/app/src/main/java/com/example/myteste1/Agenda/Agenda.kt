@@ -40,4 +40,58 @@ class Agenda() {
     fun rertonarNumeroContato(): Int{
         return listaContatos.size
     }
+    fun checarListaDeContato(): Boolean{
+
+     return listaContatos.isEmpty()
+
+    }
+    fun testarRepetiçaoContato(contato: ClasseAgenda): Boolean{
+
+        var resultado : Boolean = false
+        for (lista in listaContatos){
+            if (lista.telefone == contato.telefone){
+                resultado = true
+                break
+            }
+        }
+        return resultado
+    }
+    fun testarRepetiçaoNome(contato: ClasseAgenda): Boolean{
+
+        var resultado : Boolean = false
+        for (lista in listaContatos){
+            if (lista.nome == contato.nome){
+                resultado = true
+                break
+            }
+        }
+        return resultado
+    }
+    fun imprimirNomeContatoPesquisa(contato: ClasseAgenda): String{
+        var encontrou : String = ""
+
+        for (lista in listaContatos){
+            if (lista.nome == contato.nome){
+                encontrou = lista.nome
+                break
+            }
+
+        }
+        return encontrou
+
+    }
+    fun imprimirTelefoneContatoPesquisa(contato: ClasseAgenda): String{
+        var encontrou : String = ""
+
+        for (lista in listaContatos){
+            if (lista.telefone == contato.telefone){
+                encontrou = lista.telefone
+                break
+            }
+
+        }
+        return encontrou
+
+    }
+
 }

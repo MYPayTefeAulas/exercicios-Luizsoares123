@@ -54,8 +54,8 @@
         android:id="@+id/btSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#167A1A"
         android:text="Salvar"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +65,8 @@
         android:id="@+id/btDeletar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#BA1B1B"
         android:text="Deletar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,11 +76,35 @@
         android:id="@+id/btProximo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="76dp"
         android:backgroundTint="#FFC107"
-        android:text="Próximo"
+        android:text="Imprimir"
         app:layout_constraintEnd_toEndOf="@+id/btDeletar"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/btSalvar"
         app:layout_constraintTop_toBottomOf="@+id/txtTelefone" />
+
+    <EditText
+        android:id="@+id/txtEntradaNomeDaPesquisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/btBotaoPesquisar"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btProximo" />
+
+    <Button
+        android:id="@+id/btBotaoPesquisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:text="Pesquisar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btProximo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

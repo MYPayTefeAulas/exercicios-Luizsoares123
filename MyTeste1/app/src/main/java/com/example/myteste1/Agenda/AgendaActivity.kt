@@ -22,15 +22,21 @@ class AgendaActivity : AppCompatActivity() {
             val novoContato = ClasseAgenda(nome,0, telefone)
 
             if(novoContato.verificatNomeVazil() &&novoContato.verificarTelefone()){
+                binding.txtSaida.setTextColor(CorVermelho)
                 binding.txtSaida.text = "Erro!! Por favor digite um nome e um número de telefone."
             }else if (novoContato.verificatNomeVazil()){
+                binding.txtSaida.setTextColor(Color.rgb(212,12,12))
                 binding.txtSaida.text = "Erro!! Por favor digite um nome"
+                binding.txtSaida.setTextColor(Color.rgb(212,12,12))
             }else if (novoContato.verificarTelefone()){
+                binding.txtSaida.setTextColor(Color.rgb(212,12,12))
                 binding.txtSaida.text = "Erro!! Por favor digite um número de telefone"
             } else if (agenda.testarRepetiçaoContato(novoContato)){
+                binding.txtSaida.setTextColor(Color.rgb(212,12,12))
                 binding.txtSaida.text = "Erro!! Contato já existe"
 
             }else{
+                binding.txtSaida.setTextColor(Color.rgb(12,212,12))
                 binding.txtNome.setText("")
                 binding.txtTelefone.setText("")
                 agenda.salvarContato(novoContato)
@@ -43,6 +49,7 @@ class AgendaActivity : AppCompatActivity() {
         }
         binding.btProximo.setOnClickListener {
             if (agenda.checarListaDeContato()){
+                binding.txtSaida.setTextColor(Color.rgb(212,12,12))
                 binding.txtSaida.text = "Nenhum contato para imprimir!!"
             }else{
 
@@ -70,6 +77,9 @@ class AgendaActivity : AppCompatActivity() {
                 binding.txtSaida.text = "Erro!!! Contato não encontrado!!!"
             }else{
                 binding.txtSaida.text = "Contato Encontrado"
+
+                binding.txtNome.setText(agenda.imprimirNomeContatoPesquisa(pessoaPesquisar))
+                binding.txtTelefone.setText(agenda.imprimirTelefoneContatoPesquisa(pessoaPesquisar))
             }
 
         }
@@ -77,4 +87,9 @@ class AgendaActivity : AppCompatActivity() {
 
         setContentView(binding.root)
     }
+    companion object{
+        val CorVermelho : Int = Color.rgb(212,12,12)
+        val CorVerde : Int = Color.rgb(12,212,12)
+    }
+
 }

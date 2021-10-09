@@ -11,14 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTeste1">
         <activity
+            android:name=".DadosActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Agenda.DadosActivity"
+            android:exported="true" />
+        <activity
             android:name=".TelaInicialActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            </activity>
+        </activity>
         <activity
             android:name=".PessoasActivity"
             android:exported="true" />
@@ -34,9 +40,7 @@
         <activity
             android:name=".PessoasActivity"
             android:exported="true"
-            tools:ignore="DuplicateActivity">
-
-        </activity>
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".ListaFrutas"
             android:exported="true" />

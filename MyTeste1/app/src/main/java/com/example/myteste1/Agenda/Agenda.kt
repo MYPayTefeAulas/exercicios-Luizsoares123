@@ -84,8 +84,8 @@ class Agenda() {
         var encontrou : String = ""
 
         for (lista in listaContatos){
-            if (lista.telefone == contato.telefone){
-                encontrou = lista.telefone
+            if (lista.nome == contato.nome){
+                encontrou = lista.nome
                 break
             }
 

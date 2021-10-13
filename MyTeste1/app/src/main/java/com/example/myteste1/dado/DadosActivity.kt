@@ -1,6 +1,5 @@
-package com.example.myteste1
+package com.example.myteste1.dado
 
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myteste1.databinding.ActivityDadosBinding

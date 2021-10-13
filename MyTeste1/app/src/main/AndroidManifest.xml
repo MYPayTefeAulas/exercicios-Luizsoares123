@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyTeste1">
         <activity
-            android:name=".DadosActivity"
+            android:name=".dado.DadosActivity"
             android:exported="true" />
         <activity
             android:name=".Agenda.DadosActivity"
             android:exported="true" />
         <activity
-            android:name=".TelaInicialActivity"
+            android:name=".telaInicial.TelaInicialActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,10 +26,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PessoasActivity"
+            android:name=".pessoas.PessoasActivity"
             android:exported="true" />
         <activity
-            android:name=".CalculadoraActivity"
+            android:name=".calculadora.CalculadoraActivity"
             android:exported="true" />
         <activity
             android:name=".Agenda.AgendaActivity"
@@ -38,14 +38,14 @@
             android:name=".greeters.GreeterActivity"
             android:exported="true" />
         <activity
-            android:name=".PessoasActivity"
+            android:name=".pessoas.PessoasActivity"
             android:exported="true"
             tools:ignore="DuplicateActivity" />
         <activity
-            android:name=".ListaFrutas"
+            android:name=".listaDeFrutas.ListaFrutas"
             android:exported="true" />
         <activity
-            android:name=".CalculadoraActivity"
+            android:name=".calculadora.CalculadoraActivity"
             android:exported="true"
             tools:ignore="DuplicateActivity" />
     </application>

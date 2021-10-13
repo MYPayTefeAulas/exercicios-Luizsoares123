@@ -1,11 +1,14 @@
-package com.example.myteste1
+package com.example.myteste1.telaInicial
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myteste1.Agenda.AgendaActivity
+import com.example.myteste1.calculadora.CalculadoraActivity
+import com.example.myteste1.pessoas.PessoasActivity
 import com.example.myteste1.databinding.ActivityTelaInicialBinding
 import com.example.myteste1.greeters.GreeterActivity
+import com.example.myteste1.listaDeFrutas.ListaFrutas
 
 class TelaInicialActivity : AppCompatActivity() {
 

@@ -16,13 +16,16 @@ class AgendaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityAgendaBinding.inflate(layoutInflater)
+
         binding.btSalvar.setOnClickListener {
             val nome = binding.txtNome.text.toString()
             val telefone = binding.txtTelefone.text.toString()
             val novoContato = ClasseAgenda(nome,0, telefone)
 
-            if(novoContato.verificatNomeVazil() &&novoContato.verificarTelefone()){
+            if(novoContato.verificatNomeVazil() && novoContato.verificarTelefone()){
+
                 binding.txtSaida.setTextColor(CorVermelho)
+
                 binding.txtSaida.text = "Erro!! Por favor digite um nome e um número de telefone."
             }else if (novoContato.verificatNomeVazil()){
                 binding.txtSaida.setTextColor(Color.rgb(212,12,12))
@@ -35,28 +38,32 @@ class AgendaActivity : AppCompatActivity() {
                 binding.txtSaida.setTextColor(Color.rgb(212,12,12))
                 binding.txtSaida.text = "Erro!! Contato já existe"
 
-            }else{
-                binding.txtSaida.setTextColor(Color.rgb(12,212,12))
-                binding.txtNome.setText("")
-                binding.txtTelefone.setText("")
-                agenda.salvarContato(novoContato)
-                binding.txtSaida.text = "Contato Salvo:\n nome:${nome}\ntelefone:${telefone} "
+        }else{
+            binding.txtSaida.setTextColor(Color.rgb(12,212,12))
+            binding.txtNome.setText("")
+            binding.txtTelefone.setText("")
+            agenda.salvarContato(novoContato)
+            binding.txtSaida.text = "Contato Salvo:\n" +
+                    "\n nome:${nome}\n" +
+                    " " +
+                    "\n telefone:${telefone} "
 
-            }
+        }
 
 
 
         }
         binding.btProximo.setOnClickListener {
+
             if (agenda.checarListaDeContato()){
                 binding.txtSaida.setTextColor(Color.rgb(212,12,12))
                 binding.txtSaida.text = "Nenhum contato para imprimir!!"
+
             }else{
 
                 binding.txtNome.setText(agenda.imprimirNomeContato())
                 binding.txtTelefone.setText(agenda.imprimirTelefone())
             }
-
 
         }
         binding.btDeletar.setOnClickListener {

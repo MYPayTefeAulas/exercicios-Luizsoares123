@@ -1,4 +1,4 @@
-package com.example.myteste1
+package com.example.myteste1.dado
 
 class ClasseDados(val numeroDeLados: Int) {
     private var quantidadeDeLados = mutableListOf<Int>()
